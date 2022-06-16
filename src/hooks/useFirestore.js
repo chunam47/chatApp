@@ -3,7 +3,8 @@ import { db } from "../firebase/config";
 
 const useFirestore = (collection, condition) => {
   const [documents, setDocuments] = useState([]);
-
+  console.log(db.app);
+  console.log(db, "=========");
   useEffect(() => {
     let collectionRef = db.collection(collection).orderBy("createdAt");
     if (condition) {
